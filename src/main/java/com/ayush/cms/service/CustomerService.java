@@ -18,7 +18,7 @@ public class CustomerService {
     public List<Customer> getCustomers(){
         return customerDAO.findAll();
     }
-    public Customer getCustomer(int customerId){
+    public Customer getCustomer(int customerId) {
         return customerDAO.findById(customerId).get();
     }
     public Customer updateCustomer(int customerId, Customer customer){
