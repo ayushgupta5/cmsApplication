@@ -8,4 +8,3 @@ public interface CustomerDAO extends CrudRepository<Customer, Integer> {
     @Override
     List<Customer> findAll();
 }
-
