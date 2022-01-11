@@ -10,7 +10,7 @@ public class CustomerResource {
     @Autowired
     private CustomerService customerService;
     @PostMapping
-    public Customer addCustomer(@RequestBody Customer customer) {
+    public Customer addCustomer(@RequestBody Customer customer){
         return customerService.addCustomer(customer);
     }
     @GetMapping
@@ -26,7 +26,7 @@ public class CustomerResource {
         return customerService.updateCustomer(customerId, customer);
     }
     @DeleteMapping(value = "/{customerId}")
-    public void deleteCustomer(@PathVariable("customerId") int customerId) {
+    public void deleteCustomer(@PathVariable("customerId") int customerId){
         customerService.deleteCustomer(customerId);
     }
 }
