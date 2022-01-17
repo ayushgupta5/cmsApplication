@@ -4,13 +4,11 @@ import com.ayush.cms.model.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import java.util.*;
-import java.util.concurrent.CopyOnWriteArrayList;
 @Component
 public class CustomerService {
     @Autowired
     private CustomerDAO customerDAO;
-    private List<Customer> customerList = new CopyOnWriteArrayList<>();
-    public Customer addCustomer(Customer customer){
+    public Customer addCustomer(Customer customer) {
         return customerDAO.save(customer);
     }
     public List<Customer> getCustomers(){
@@ -19,11 +17,11 @@ public class CustomerService {
     public Customer getCustomer(int customerId) {
         return customerDAO.findById(customerId).get();
     }
-    public Customer updateCustomer(int customerId, Customer customer){
+    public Customer updateCustomer(int customerId, Customer customer) {
         customer.setCustomerId(customerId);
         return customerDAO.save(customer);
     }
-    public void deleteCustomer(int customerId){
+    public void deleteCustomer(int customerId) {
         customerDAO.deleteById(customerId);
     }
 }
