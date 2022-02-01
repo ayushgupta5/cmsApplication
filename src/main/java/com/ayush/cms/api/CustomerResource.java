@@ -14,7 +14,7 @@ public class CustomerResource {
         return customerService.addCustomer(customer);
     }
     @GetMapping
-    public List<Customer> getCustomers(){
+    public List<Customer> getCustomers() {
         return customerService.getCustomers();
     }
     @GetMapping(value = "/{customerId}")
