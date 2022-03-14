@@ -22,8 +22,8 @@ public class CustomerResource {
         return customerService.getCustomer(customerId);
     }
     @PutMapping(value = "/{customerId}")
-    public Customer updateCustomer(@PathVariable("customerId") int custometrId, @RequestBody Customer customer) {
-        return customerService.updateCustomer(custometrId, customer);
+    public Customer updateCustomer(@PathVariable("customerId") int customerId, @RequestBody Customer customer) {
+        return customerService.updateCustomer(customerId, customer);
     }
     @DeleteMapping(value = "/{customerId}")
     public void deleteCustomer(@PathVariable("customerId") int customerId) {
